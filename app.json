@@ -28,6 +28,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e2b56336-779b-4552-9684-46188a81873a"
+      }
+    },
+    "owner": "veter.ok77"
   }
 }
