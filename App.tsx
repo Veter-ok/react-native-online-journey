@@ -1,10 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View, Text } from 'react-native';
 import Navigation from './Navigation';
 
 export default function App() {
   return (
     <Navigation/>
+      //  <SafeAreaView>
+      //   <Text className='text-red-500'>fsdfdf</Text>
+      // </SafeAreaView>
   );
 }
 
