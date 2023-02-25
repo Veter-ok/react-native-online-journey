@@ -1,10 +1,15 @@
 import React, {FunctionComponent as FC} from 'react'
-import {Text, View } from 'react-native'
+import {Button, Text, View} from 'react-native'
+import {UserIcon} from 'react-native-heroicons/outline'
 
 const ProfileBar:FC = () => {
   return (
-	<View>
-		<Text className="text-red-500">Lavrov Rodion 13</Text>
+	<View className="bg-white">
+		<View>
+			<Text className="">Lavrov Rodion</Text>
+			<Text className="">Вход</Text>
+		</View>
+		<UserIcon size={32}/>
 	</View>
   )
 }
