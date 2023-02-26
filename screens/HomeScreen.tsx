@@ -1,21 +1,25 @@
-import React, {FunctionComponent as FC} from 'react'
-import { StatusBar } from 'expo-status-bar'
-import {Text, SafeAreaView, TouchableHighlight } from 'react-native'
+import React, {FunctionComponent as FC, useContext} from 'react'
+import {Text, SafeAreaView} from 'react-native'
 import ProfileBar from '../components/ui/ProfileBar/profileBar'
 import Button from '../components/ui/Button/Button'
+import { useNavigation } from '@react-navigation/native'
+import { AuthContext } from '../providers/AuthProvider'
 
 const HomeScreen:FC = () => {
-  return (
+	const {Auth, setAuth} = useContext(AuthContext)
+	const {navigate} = useNavigation()
+
+	return (
 	<>
-		{/* <ProfileBar/> */}
 		<SafeAreaView>
 			<ProfileBar/>
-			<Button title='Главная'/>
-			<Button title='Профиль'/>
-			<Button title='Карта'/>
+			<Button title='Главная' onClick={() => console.log("123")}/>
+			<Button title='Профиль' onClick={() => navigate("Profile")}/>
+			<Button title='Карта' onClick={() => console.log("123")}/>
+			<Button title='Выход' onClick={() => setAuth(false)}/>
 		</SafeAreaView>
 	</>
-  )
+	)
 }
 
 export default HomeScreen
