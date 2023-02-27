@@ -1,10 +1,11 @@
 import React, {FunctionComponent as FC, useContext} from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from '../screens/HomeScreen';
+import HomeScreen from '../components/screens/HomeScreen';
 import { AuthContext } from '../providers/AuthProvider';
-import AuthScreen from '../screens/AuthScreen';
-import ProfileScreen from '../screens/Profile';
+import AuthScreen from '../components/screens/AuthScreen';
+import ProfileScreen from '../components/screens/ProfileScreen';
+import MapScreen from '../components/screens/MapScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +19,7 @@ const Navigation:FC = () => {
 					<>
 						<Stack.Screen name="Home" component={HomeScreen}/>
 						<Stack.Screen name="Profile" component={ProfileScreen}/>
+						<Stack.Screen name="Map" component={MapScreen}/>
 					</>
 				:
 					<Stack.Screen name="Auth" component={AuthScreen}/>
@@ -28,3 +30,4 @@ const Navigation:FC = () => {
 }
 
 export default Navigation
+

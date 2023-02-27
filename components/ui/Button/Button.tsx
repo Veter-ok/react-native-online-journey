@@ -4,6 +4,7 @@ import {Text, TouchableHighlight } from 'react-native'
 interface IPropsButton {
 	onClick: () => void,
 	title: string
+	// className?: string
 }
 
 const Button:FC<IPropsButton> = ({onClick, title}) => {
@@ -11,7 +12,8 @@ const Button:FC<IPropsButton> = ({onClick, title}) => {
 	<TouchableHighlight 
 		underlayColor="#FBBF24"
 		onPress={onClick} 
-		className='w-full bg-violet-500 block p-3 mx-auto mt-4 rounded-lg'
+		className="w-full bg-violet-500 block p-3 mx-auto rounded-lg mt-4"
+		// className={className !== "" ? className : `w-full bg-violet-500 block p-3 mx-auto rounded-lg mt-4`}
 	>
 		<Text className='text-center text-lg font-bold'>{title}</Text>
 	</TouchableHighlight>

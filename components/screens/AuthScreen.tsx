@@ -1,9 +1,9 @@
 import React, {FunctionComponent as FC, useContext, useState} from 'react'
 import {Text, View, SafeAreaView} from 'react-native'
-import Button from '../components/ui/Button/Button'
+import Button from '../ui/Button/Button'
 import { useNavigation } from '@react-navigation/native'
-import { AuthContext } from '../providers/AuthProvider'
-import Field from '../components/ui/Field/filed'
+import { AuthContext } from '../../providers/AuthProvider'
+import Field from '../ui/Field/filed'
 
 const AuthScreen:FC = () => {
 	const {Auth, setAuth} = useContext(AuthContext)
