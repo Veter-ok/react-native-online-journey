@@ -1,9 +1,7 @@
 import React, {FunctionComponent as FC, useContext} from 'react'
 import {Text, View, Image} from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { AuthContext } from '../../providers/AuthProvider'
 import MapView, { Marker } from 'react-native-maps';
-import YaMap from 'react-native-yamap'
 import Button from '../ui/Button/Button';
 
 const MapScreen:FC = () => {
