@@ -11,26 +11,26 @@ const HomeScreen:FC = () => {
 	return (
 	<>
 		<ProfileBar/>
-		<SafeAreaView className='m-4' >
-			<Button title='Профиль' onClick={() => navigate("Profile")}/>
-			<Button title='Карта' onClick={() => navigate("Map")}/>
-			<View className='mt-4'>
-				<Text className='text-xl mb-4'>Последние места</Text>
-				<ScrollView className='flex-row' horizontal>
-					<PlaceCard title="Красная площадь"/>
-					<PlaceCard title="Красная площадь"/>
-					<PlaceCard title="Красная площадь"/>
+		<SafeAreaView className='m-4 h-full' >
+				<ScrollView>
+					<View className='mt-4'>
+						<Text className='text-xl mb-4'>Последние места</Text>
+						<ScrollView className='flex-row' horizontal>
+							<PlaceCard title="Красная площадь"/>
+							<PlaceCard title="Красная площадь"/>
+							<PlaceCard title="Красная площадь"/>
+						</ScrollView>
+					</View>
+					<View className='mt-4'>
+						<Text className='text-xl mb-4'>Избранные места</Text>
+						<ScrollView className='flex-row' horizontal>
+							<PlaceCard title="Красная площадь"/>
+							<PlaceCard title="Красная площадь"/>
+							<PlaceCard title="Красная площадь"/>
+						</ScrollView>
+					</View>
 				</ScrollView>
-			</View>
-			<View className='mt-4'>
-				<Text className='text-xl mb-4'>Избранные места</Text>
-				<ScrollView className='flex-row' horizontal>
-					<PlaceCard title="Красная площадь"/>
-					<PlaceCard title="Красная площадь"/>
-					<PlaceCard title="Красная площадь"/>
-				</ScrollView>
-			</View>
-		</SafeAreaView>
+			</SafeAreaView>
 	</>
 	)
 }
